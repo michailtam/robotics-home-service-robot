@@ -68,7 +68,7 @@ $ source devel/setup.bash
 To execute one of the above shell scripts change in the rvizConfig folder and issue:
 ```
 $ source devel/setup.bash
-$ cd src/rvizConfig
+$ cd src/scripts
 $ ./<name_of_shell_script>.sh
 ```
 
