@@ -187,10 +187,11 @@ void autonomous_nav(TaskData& tskData, const AmclPoseListener* pAmclPoseListener
   // Check if the robot is moving towards the target zone
   if(tskData.operation == Operation::MOVING) {
     // Checks if the robot has reached the target zone
-    if(distance < 0.45f && robotStopped(ang_x, ang_y, ang_z) == true && tskData.operation == Operation::MOVING) {
+    if(distance < 0.5f && robotStopped(ang_x, ang_y, ang_z) == true && tskData.operation == Operation::MOVING) {
       switch(static_cast<int>(tskData.targetZone)) {
         case static_cast<int>(TargetZone::PICKUP_ZONE):
           ROS_INFO("[OBJECT PICKED UP]");
+          ros::Duration(5).sleep();
           tskData.operation = Operation::DELETE_MARKER;
           break;
         case static_cast<int>(TargetZone::DROP_OFF_ZONE):
