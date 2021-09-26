@@ -57,16 +57,17 @@ $ catkin_make
 $ source devel/setup.bash
 ```
 
-5. Run the simulation: With the following shell scripts on one side different test operations can be performed (test_, pick_, add_), and on the other side the main task home service can be executed, which simulates the pickup and delivery task:
+5. Run the simulation: With the following shell scripts which are located in the **src/rvizConfig** folder, on one side, different test operations can be performed (test_, pick_, add_), and on the other side the main task home service can be executed, which simulates the pickup and delivery task:
 - [test_slam.sh] - Tests if SLAM is working
 - [test_navigation.sh] - Tests if the robot can be navigated manually
 - [pick_objects.sh] - Tests if the robot navigates autonomous to the pick up and drop off zone
 - [add_marker.sh] - Tests if the markers are shown and hidden properly (marker shown at pick up zone -> marker hidden after 5 seconds at pickup zone -> marker shown after 5 seconds at the drop off zone)
 - [home_service.sh] - This executes the pickup and delivery task. More precisely, the robot executes the following operations autonomously: Navigates to the pickup zone -> picks up the marker -> navigates to the drop zone and delivers the marker.
 
-To execute one of the above shell scripts change in the toplevel of the catkin ws and issue:
+To execute one of the above shell scripts change in the rvizConfig folder and issue:
 ```
 $ source devel/setup.bash
+$ cd src/rvizConfig
 $ ./<name_of_shell_script>.sh
 ```
 
