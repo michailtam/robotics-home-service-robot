@@ -65,11 +65,9 @@ $ source devel/setup.bash
 - [add_marker.sh] - Tests if the markers are shown and hidden properly (marker shown at pick up zone -> marker hidden after 5 seconds at pickup zone -> marker shown after 5 seconds at the drop off zone)
 - [home_service.sh] - This executes the pickup and delivery task. More precisely, the robot executes the following operations autonomously: Navigates to the pickup zone -> picks up the marker -> navigates to the drop zone and delivers the marker.
 
-To execute one of the above shell scripts change in the rvizConfig folder and issue:
+To execute one of the above issue from the toplevel catkin folder:
 ```
-$ source devel/setup.bash
-$ cd src/scripts
-$ ./<name_of_shell_script>.sh
+$ src/scripts/<name_of_shell_script>.sh
 ```
 
 Alternatively, you can execute each script seperately by following the below steps. The disadvantage of this method is that you need to open for each launch file a seperate terminal:
