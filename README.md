@@ -42,9 +42,10 @@ To run the simulation, please follow the steps bellow. If you encounter any prob
 $ git clone https://github.com/michailtam/robotics-home-service-robot.git
 ```
 
-2. Download the 2D navigation stack manually: Unlike, the other packages the navigation package has to be downloaded manually by changing in the ***src*** folder and issuing:
+2. Download additional packages manually: Unlike, the other packages the navigation and gmapping package has to be downloaded manually by changing in the ***src*** folder and issuing:
 ```
-$ git clone https://github.com/ros-planning/navigation.git 
+$ git clone https://github.com/ros-planning/navigation.git
+$ git clone https://github.com/ros-perception/slam_gmapping.git
 ```  
 
 3. Build the project: After all packages and dependencies are installed properly, the project can be build by changing in the catkin toplevel workspace folder and issuing:
